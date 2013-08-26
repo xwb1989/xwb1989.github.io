@@ -12,6 +12,7 @@
 }
 
 html, body {
+    margin-top: 1em;
     height: 100%;
 }
 
