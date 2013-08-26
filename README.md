@@ -5,5 +5,4 @@
 ##TO DO LIST
 
 * Responsive design
-* Google Analytics
 * 将title icon改成圆角。如果有可能，自己重新设计一个icon。
