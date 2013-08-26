@@ -1,0 +1,2 @@
+pygment: true
+permalink: /:categories/:year/:month/:title.html
