@@ -5,4 +5,5 @@
 ##TO DO LIST
 
 * Responsive design
-* 将title icon改成圆角。如果有可能，自己重新设计一个icon。
+* 加入留言组件
+* 加入RSS
