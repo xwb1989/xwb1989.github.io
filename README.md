@@ -5,5 +5,3 @@
 ##TO DO LIST
 
 * Responsive design
-* 加入留言组件
-* 加入RSS
