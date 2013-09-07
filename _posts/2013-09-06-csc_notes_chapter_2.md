@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSC Notes Chapter 2 Operating-System Structures
+category: booknote
 ---
 
 #CSC Notes Chapter 2 Operating-System Structures

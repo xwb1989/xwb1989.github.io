@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: PRETEND TO BE PRO
 ---
 #Pretend to be Pro

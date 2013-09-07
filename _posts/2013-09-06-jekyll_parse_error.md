@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 解决jekyll(github page)无法正确解析nested lists的问题
+category: blog
 ---
 
 ##问题描述
