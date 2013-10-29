@@ -18,6 +18,7 @@ CPU Scheduler: short-term scheduler
 
 ###Preemptive Scheduling
 CPU-scheduling decisions may take place under the following four circumstance:
+
 * When a process switches from the running state to the waiting state;
 * When a process switches from the running state to the ready state;
 * When a process switches from the waiting state to the ready state;

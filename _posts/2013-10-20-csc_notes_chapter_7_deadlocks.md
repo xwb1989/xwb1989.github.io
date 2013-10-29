@@ -44,7 +44,7 @@ Generally speaking, we can deal with the deadlock problem in one of three ways:
 
 * Mutual Exclusion: The mutual-exclusion condition must hold for non-sharable resources. 
 * Hold and Wait: To ensure that the hold-and-wait condition never occurs in the system, we must guarantee that, whenever a process requests a resource, it does not hold any other resources. 
-* No preemption: there should be no preemption of resources that have already been allocated.
+* No preemption: If a process is holding some resources and requests another resource that cannot be immediately allocated to it (that is, the process must wait), then all resources the process is currently holding are preempted.
 * Circular wait: impose a total ordering of all resource types and to require that each process requests resources in an increasing order of enumeration.
 
 ##Deadlock Avoidance
