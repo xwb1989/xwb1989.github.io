@@ -115,6 +115,7 @@ Allow a process to move between queues. If a process uses too much CPU time, it 
 ###Contention Scope
 
 There are 2 kins of contention scope in system:
+
 * In many-to-one and many-to-many models, user thread need to be scheduled to available LWP(redirected from kernel thread). This scheme is called __process-contention scope(PCS)__.
 
 * To decide which kernel thread on CPU, there is a system-contention scope(SCS). Systems using one-to-one model, such as Windows XP, Solaris, and Linux, schedule threads using only SCS.
@@ -144,6 +145,7 @@ The main-memory architecture of a system can affect processor affinity issues.
 Load balancing is necessary on systems where each processor has its own private queue of eligible processes to execute.
 
 There two approach to load balancing:
+
 * push migration: a specific task periodically checks the load on each processor and balance if an unbalance is found.
 * pull migration: an idle processor pulls a waiting task from a busy processor.
 
@@ -158,6 +160,7 @@ __Memory stall:__ when a processor accesses memory, it spends a significant amou
 We can map multiple thread to one core such that when one thread is in memory stall, the core can switch in another thread for computing.
 
 Notice that a multithreaded multicore processor actually requires two different levels of scheduling. 
+
 * On one level are the scheduling decisions that must be made by the operating system as it chooses which software thread to run on each hardware thread (logical processor). For this level of scheduling, the operating system may choose any scheduling algorithm.
 
 * A second level of scheduling specifies how each core decides which hardware thread to run. There are several strategies to adopt in this situation.
@@ -179,6 +182,7 @@ Virtualization can thus undo the good scheduling-algorithm efforts of the operat
 
 ##Java Scheduling
 A runnable thread executes until one of the following events occurs:
+
 * Its time quantum expires;
 * It blocks for I/O;
 * It exits its run() method.
@@ -189,6 +193,7 @@ A runnable thread executes until one of the following events occurs:
 
 ##Algorithm Evaluation
 Criteria:
+
 * Maximizing CPU utilization
 * Maximizing throughput
 
