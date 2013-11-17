@@ -110,22 +110,92 @@ Swapping in RR scheduling:
     * memory manager swap processes fast enough
     * the quantum is large enough to allow reasonable amounts of computing to be done  between swaps
 
+roll out, roll in:
 
+* When a higher-priority process arrives, the memory manager can swap out the lower-priority process and then load and execute the higher-priority process.
+* When the higher-priority process finishes, the lower-priority process can be swapped back in and continued.
 
+>Normally, a process that is swapped out will be swapped back into the same memory space it occupied previously. This restriction is dictated by the method of address binding.
 
+* If binding is done at assembly or load time, then the process cannot be easily moved to a different location.
+* If execution-time binding is being used, however, then a process can be swapped into a different memory space, because the physical addresses are computed during execution time.
+
+The process of swapping:
+
+* OS maintains a ready queue consisting of all processes whose memory images are on the backing store or in memory and are ready to run.
+* Dispatcher checks whether next process is in memory
+* If not and if there is no free memory, swap out a process in memory
+* Swap in the desired process
+* Load and continue that process
  
+##Contiguous Memory Allocation
+>In contiguous memory allocation, each process is contained in a singlecontiguous section of memory.
+###Memory Mapping and Protection
+
+CPU checks every generated memory address to protect both OS and the other users' programs and data from being modified.
+
+###Memory Allocation
+
+**Multiple-partition method:** partition the memory into some fixed parts and each for a process.
+
+**Variable-partition:** the operating system keeps a table indicating which parts of memory are available and which are occupied. Initially, all memory is available for user processes and is considered one large block of available memory, a hole. 
+
+* First fit: allocate the first hole that is big enough
+* Best fit: Allocate the smallest hole that is big enough
+* Worst fit: Allocate the largest hole
+
+###Fragmentation
+
+* Internal fragmentation: unused memory that is internal to a partition
+* External fragmentation: when there is enough total memory space to satisfy a request but the available spaces are not contiguous:
+    * Compaction: Shuffle the memory contents so as to place all red memory together in one large block. This can be done only the relocation address is dynamic and done at execution time.
+    * Permit the logical address space of the processes to be noncontiguous.
+        * Paging
+        * Segmentation
 
 
+##Paging
+
+* avoids external fragmentation and the need for compaction
+* solve the problem of fitting memory chances of varying sizes onto the backing store:
+    * disk also suffers the same fragmentation problem as memory
+    * disk is much slower, so compaction is impossible
+
+###Basic Method
+
+logical address is mapped into physical memory via page table.
+
+###Hardware Support
+
+* page-table base register
+* translation look-aside buffer
+    * address-space identifiers
+* page-table length register
+
+###Protection
 
 
+###Shared pages
 
+If the code is reentrant code(or pure code), it can be shared. Reentrant code is non-self-modifying code: it never changes during execution. Thus, two or more processes can execute the same code at the same time.
 
+##Structure of the Page Table
 
+###Hierarchical Paging
 
+Useful in the situation that the page table is large -- instead of keeping a large chunk of continuous memory to story the large page table, divide the page table into smaller pieces.
 
+###Hashed Page Tables
 
+###Inverted Page Tables
 
+>Reentrant code is non-self-modifying code: it never changes during execution. Thus, two or more processes can execute the same code at the same time.
 
+##Segmentation
+
+Segmentation:  a memory-management scheme that supports the user's view of memory. A logical address space is a collection of segments. Each segment has a name and a length. The addresses specify both the segment name and the offset within the segment. The user therefore specifies each address by two quantities: a segment name and an offset. 
+
+##Summary
 
 
 
