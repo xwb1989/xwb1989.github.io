@@ -168,7 +168,7 @@ logical address is mapped into physical memory via page table.
 ###Hardware Support
 
 * page-table base register
-* translation look-aside buffer
+* translation look-aside buffer(TLB)
     * address-space identifiers
 * page-table length register
 
