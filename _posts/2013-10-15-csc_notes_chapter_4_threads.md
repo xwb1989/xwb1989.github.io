@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: CSC Notes Chapter 4 Threads
 category: booknote
@@ -11,7 +11,7 @@ category: booknote
 * To examine issues related to multithreaded programming
 
 ##Overview
-A thread is a basic unit of CPU utilisation; it comprises:
+A thread is a basic unit of CPU utilization; it comprises:
     
 * a thread ID
 * a program counter
