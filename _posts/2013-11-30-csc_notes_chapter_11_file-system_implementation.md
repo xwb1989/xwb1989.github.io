@@ -95,7 +95,7 @@ Each partition can be either “raw,” containing no file system, or “cooked,
 
 ###Virtual File Systems(VFSs)
 
-The VFS layer serves two important functions:
+The VFS(used by UNIX) layer serves two important functions:
 
 1. It separates file-system-generic operations from their implementation by defining a clean VFS interface.
 2. It provides a mechanism for uniquely representing a file throughout a network. The VFS is based on a file-representation structure, called a **vnode**, that contains a numerical designator for a network-wide unique file. 
@@ -208,9 +208,9 @@ Pros:
 Cons:
 
 * the index-block overhead: this can be solved by multiple mechanism:
-    * linked scheme: link several index blocks for large file
-    * multilevel: A variant of linked representation uses a first-level index block to point to a set of second-level index blocks, which in turn point to the file blocks.
-    * combined scheme: mixed direct block and indirect block
+    * **linked scheme**: link several index blocks for large file
+    * **multilevel**: A variant of linked representation uses a first-level index block to point to a set of second-level index blocks, which in turn point to the file blocks.
+    * **combined scheme**: mixed direct block and indirect block
     
     Under this method, the number of blocks that can be allocated to a file exceeds the amount of space addressable by the four-byte file pointers used by many operating systems.
 
