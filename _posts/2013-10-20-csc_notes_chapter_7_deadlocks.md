@@ -58,7 +58,7 @@ A state is safe if the system can allocate resources to each process (up to its 
 Now suppose that process Pi requests resource Rj. The request can be granted only if converting the request edge Pi → Rj to an assignment edge Rj → Pi does not result in the formation of a cycle in the resource-allocation graph. We check for safety by using a cycle-detection algorithm. An algorithm for detecting a cycle in this graph requires an order of n^2 operations, where n is the number of processes in the system.
 
 ###Banker's Algorithm
-
+The resource-allocation-graph algorithm is not applicable to a resource- allocation system with multiple instances of each resource type.
 ##Deadlock Detection
 >A deadlock exists in the system if and only if the wait-for graph contains a cycle. To detect deadlocks, the system needs to maintain the wait-for graph and periodically invoke an algorithm that searches for a cycle in the graph. An algorithm to detect a cycle in a graph requires an order of n2 operations, where n is the number of vertices in the graph.
 
