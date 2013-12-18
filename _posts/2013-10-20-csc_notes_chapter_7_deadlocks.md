@@ -5,8 +5,9 @@ category: booknote
 ---
 #CSC Notes Chapter 7 Deadlocks
 >##Chapter Objectives
-* To develop a description of deadlocks, which prevent sets of concurrent processes from completing their tasks.* To present a number of different methods for preventing or avoiding deadlocks in a computer system.
-##System Model
+* To develop a description of deadlocks, which prevent sets of concurrent processes from completing their tasks.
+* To present a number of different methods for preventing or avoiding deadlocks in a computer system.
+##System Model
 
 Under the normal mode of operation, a process may utilize a resource in only the following sequence:
 
@@ -59,6 +60,29 @@ Now suppose that process Pi requests resource Rj. The request can be granted onl
 
 ###Banker's Algorithm
 The resource-allocation-graph algorithm is not applicable to a resource- allocation system with multiple instances of each resource type.
+
+####Safety Algorithm
+
+1. Find an unfinished process that needs less than or equal to available;
+2. Add the held resource to the available for next process;
+3. Find next process;
+4. If no next process can be found all all processes finish, then the state is safe.
+
+
+Typically it's 2 steps:
+
+
+1. When a process requests resource, pretend to grant the resource and make the modify:
+    
+        Available = Available - Request[i]
+        Allocation[i] = Allocation[i] + Request[i]
+        Need[i] = Need[i] - Request[i]
+    
+2. Use _Safety Algorithm_ to determine the safety of the system.
+3. If it's safe, grant the request.
+4. Else cancel the request and restore the state
+
+
 ##Deadlock Detection
 >A deadlock exists in the system if and only if the wait-for graph contains a cycle. To detect deadlocks, the system needs to maintain the wait-for graph and periodically invoke an algorithm that searches for a cycle in the graph. An algorithm to detect a cycle in a graph requires an order of n2 operations, where n is the number of vertices in the graph.
 
