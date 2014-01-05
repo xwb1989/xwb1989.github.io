@@ -56,7 +56,8 @@ Yes, it's over-kill indeed. The `official` method is much simpler than I expecte
 			return result;
 		}
 
-		public void dfs(ArrayList<ArrayList<Integer>> weakNeighbors, int[] ratings, boolean[] visited, int[] shares, int root, Stack<Integer> stack) {
+		public void dfs(ArrayList<ArrayList<Integer>> weakNeighbors, int[] ratings, 
+		                boolean[] visited, int[] shares, int root, Stack<Integer> stack) {
 			stack.push(root);
 			while (! stack.isEmpty()) {
 				int next = stack.pop();
