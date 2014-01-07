@@ -4,7 +4,7 @@ title: LeetCode String to Integer(atoi)
 category: blog
 ---
 #LeetCode String to Integer(atoi)
-
+[Problem]("http://oj.leetcode.com/problems/string-to-integer-atoi/")
 ##Main Idea
 
 * Get rid of spaces;
