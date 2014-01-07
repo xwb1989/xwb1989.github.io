@@ -21,6 +21,8 @@ category: blog
     * if flip single once, its easy to figure out;
     * else, need some computation.
     
+The understanding of how `int` overflow is handled is the only challenge of this problem.
+
 ##First Version
 
         public int atoi(String str) {
