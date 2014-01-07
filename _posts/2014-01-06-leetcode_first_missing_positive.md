@@ -47,7 +47,7 @@ The key operation is within the `while loop`, it swaps integers to their correct
 When the `for loop` ends, the array should maintain following properties:
 
 1. If the integer is valid, it should be at its correct position;
-2. If the integer is missing, its position must be occupied by an invalid integer;
+2. If the integer is missing, its position must be occupied by an invalid integer or an unmatched integer;
 
 Thus in the second `for loop`:
 
