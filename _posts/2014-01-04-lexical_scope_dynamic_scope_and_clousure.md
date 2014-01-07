@@ -75,7 +75,7 @@ Lexical Scope与Dynamic Scope的区别浅显易懂，但我之前不知为何老
 
 这个跟closure有什么关系呢？其实我也不知道……
 
-##到底啥事Closure?
+##Closure?
 那到底什么是closure?在我的理解，closure其实可以被看作一种数据结构，可以被当作参数传递给别的函数，他包括了
 
 * 函数体（不需要函数名，可以是**匿名函数**噢！）
