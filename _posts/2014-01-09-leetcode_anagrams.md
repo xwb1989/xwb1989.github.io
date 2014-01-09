@@ -94,7 +94,7 @@ Then, I got no choice but ask for the most dull, boring approach: use hash table
 					}
 				}
 			}
-			return null;
+			return res;
 		}
 
 I was hoping the solution could be more sophisticated. However it disappointed me.
