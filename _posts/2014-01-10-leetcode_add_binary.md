@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode Add Binary
-category:blog
+category: blog
 ---
 #LeetCode Add Binary
 
