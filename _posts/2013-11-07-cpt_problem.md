@@ -2,6 +2,7 @@
 layout: post
 title: CPT似乎有些麻烦
 category: blog
+published: false
 ---
 
 #CPT似乎有些麻烦

@@ -2,6 +2,7 @@
 title: 还没进化到可以用键盘思维
 layout: post
 category: blog
+published: false
 ---
 
 #还没进化到可以用键盘思维
