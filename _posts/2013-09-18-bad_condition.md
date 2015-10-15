@@ -2,6 +2,7 @@
 layout: post
 title: 状态糟糕
 category: blog
+published: false
 ---
 #状态糟糕
 
